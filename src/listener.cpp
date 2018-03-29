@@ -26,7 +26,19 @@ int getNodeID(string ip, int port){
   return nodeID;
 }
 
+void connect(string my_ip,int my_port, string friends_ip, int friends_port){
+
+}
+
+
+void listen(){
+  
+}
+
+//.....dry run
+/*
 int main(){
   cout<<(getNodeID("shashank",007))<<endl;
   return 0;
 }
+*/
