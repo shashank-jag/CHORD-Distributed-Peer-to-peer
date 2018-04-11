@@ -18,9 +18,18 @@ int main(int argc,const char *argv[]){
     friends_ip = "" , 
     friends_port = 0 ;
 
+
+  this_node.ip = my_ip;
+  this_node.port = my_port;
+  this_node.nodeID = my_node_id;
+
+  my_node_id = getNodeID(input);
+
   connect(my_ip,my_port,friends_ip,friends_port);
 
-  listen();
+
+  int pid = fork();
+  if(pid == 0)listenOnConnection();
 
   //..........................PHASE II...........................
 
